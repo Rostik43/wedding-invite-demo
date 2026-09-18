@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Артём и Ника. 13 июня 2027</title>
+  <meta name="description" content="Приглашение на свадьбу Артёма и Ники. 13 июня 2027, усадьба «Берег» под Ижевском.">
+  <meta name="theme-color" content="#F4F0E8">
+  <link rel="preload" as="image" href="assets/seq/e_001.jpg">
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Сцена открытия: секвенция кадров, перематывается прокруткой. См. script.js -->
+<section class="env" id="env" aria-label="Конверт с приглашением">
+  <div class="env__stage">
+    <div class="env__scene">
+      <img class="env__frame" id="envFrame" src="assets/seq/e_001.jpg"
+           alt="Кремовый конверт из хлопковой бумаги с терракотовой сургучной печатью"
+           width="640" height="856" fetchpriority="high">
+      <div class="env__card" id="envCard">
+        <p class="env__card-lead">Приглашение</p>
+        <h1 class="env__card-names">Артём <br>и Ника</h1>
+      </div>
+    </div>
+    <p class="env__hint">Потяните вверх</p>
+  </div>
+</section>
+
+<!-- 1. Обложка -->
+<section class="hero">
+  <img class="hero__img" src="assets/img/hero-walk.jpg" alt="Артём и Ника идут по полю среди берёз, Ника оглядывается" width="1200" height="1600" fetchpriority="high">
+  <div class="hero__text">
+    <h2 class="hero__title">Мы женимся</h2>
+    <p class="hero__sub">И очень хотим, чтобы вы были рядом.</p>
+    <a class="btn btn--light" href="#rsvp">Ответить</a>
+  </div>
+</section>
+
+<!-- 2. Дата: скретч-карта -->
+<section class="date reveal" id="date">
+  <h2 class="h2">Дата</h2>
+  <p class="date__hint" id="dateHint">Сотрите пальцем, чтобы узнать</p>
+
+  <div class="date__row" id="scratch">
+    <div class="date__cell">
+      <span class="date__val">13</span>
+      <canvas class="date__foil" data-label="день"></canvas>
+      <span class="date__cap">день</span>
+    </div>
+    <div class="date__cell">
+      <span class="date__val">июня</span>
+      <canvas class="date__foil" data-label="месяц"></canvas>
+      <span class="date__cap">месяц</span>
+    </div>
+    <div class="date__cell">
+      <span class="date__val">2027</span>
+      <canvas class="date__foil" data-label="год"></canvas>
+      <span class="date__cap">год</span>
+    </div>
+  </div>
+
+  <button class="date__skip" id="dateSkip" type="button">Показать дату</button>
+</section>
+
+<!-- 3. Отсчёт -->
+<section class="countdown reveal" aria-label="До свадьбы осталось">
+  <div class="countdown__grid" id="countdown">
+    <div class="countdown__cell"><span class="countdown__num" data-cd="d">000</span><span class="countdown__label">дней</span></div>
+    <div class="countdown__cell"><span class="countdown__num" data-cd="h">00</span><span class="countdown__label">часов</span></div>
+    <div class="countdown__cell"><span class="countdown__num" data-cd="m">00</span><span class="countdown__label">минут</span></div>
+    <div class="countdown__cell"><span class="countdown__num" data-cd="s">00</span><span class="countdown__label">секунд</span></div>
+  </div>
+</section>
+
+<!-- 4. Обращение -->
+<section class="letter reveal">
+  <p class="letter__text">Дорогие наши, мы наконец решились. Летом мы женимся и хотим провести этот день с вами: у воды, без пафоса, с долгим ужином и танцами до последнего автобуса. Приезжайте.</p>
+  <p class="letter__sign">Артём и Ника</p>
+</section>
+
+<!-- 5. Когда и где -->
+<section class="where reveal">
+  <div class="where__info">
+    <h2 class="h2">Когда и где</h2>
+    <dl class="where__list">
+      <div><dt>Дата</dt><dd>Суббота, 13 июня 2027</dd></div>
+      <div><dt>Сбор гостей</dt><dd>15:00</dd></div>
+      <div><dt>Место</dt><dd>Усадьба «Берег»<br>Завьяловский район, берег Ижевского пруда<br>20 минут на машине от центра Ижевска</dd></div>
+    </dl>
+    <a class="btn btn--dark" href="https://yandex.ru/maps/?ll=53.05,56.88&z=12&pt=53.05,56.88,pm2rdm" target="_blank" rel="noopener">Открыть в Яндекс Картах</a>
+  </div>
+  <div class="where__map">
+    <iframe src="https://yandex.ru/map-widget/v1/?ll=53.05,56.88&z=12&pt=53.05,56.88,pm2rdm" title="Карта: усадьба «Берег» на Ижевском пруду" loading="lazy" allowfullscreen></iframe>
+  </div>
+</section>
+
+<!-- 6. Таймлайн -->
+<section class="timeline reveal">
+  <h2 class="h2">Как пройдёт день</h2>
+  <ol class="timeline__list">
+    <li><time>15:00</time><span>Сбор гостей. Лимонад, тень и знакомство</span></li>
+    <li><time>16:00</time><span>Церемония на берегу</span></li>
+    <li><time>16:40</time><span>Поздравления и фотографии</span></li>
+    <li><time>18:00</time><span>Ужин</span></li>
+    <li><time>20:30</time><span>Первый танец, а дальше все</span></li>
+    <li><time>23:00</time><span>Автобус в город</span></li>
+  </ol>
+</section>
+
+<!-- 7. Дресс-код -->
+<section class="dress reveal">
+  <h2 class="h2">Что надеть</h2>
+  <p class="dress__intro">Вечер летний, у воды. Держитесь тёплых спокойных тонов, а белое оставьте Нике.</p>
+  <ul class="dress__swatches" aria-label="Палитра">
+    <li style="--c:#EFE7D8"><span>Сливки</span></li>
+    <li style="--c:#C9B48F"><span>Песок</span></li>
+    <li style="--c:#6E7358"><span>Олива</span></li>
+    <li style="--c:#9C5B3F"><span>Терракота</span></li>
+    <li style="--c:#2B2926"><span>Графит</span></li>
+  </ul>
+  <div class="dress__cols">
+    <div>
+      <h3>Подойдёт</h3>
+      <p>Лён, хлопок, шёлк. Платья любой длины, костюмы без галстука. Удобная обувь: церемония на траве, каблуки проваливаются.</p>
+    </div>
+    <div>
+      <h3>Лучше не надо</h3>
+      <p>Белое и кремовое целиком. Чёрный костюм-тройка: будет жарко. Шпильки, см. выше.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 8. Галерея -->
+<section class="gallery reveal" aria-label="Фотографии">
+  <div class="gallery__col">
+    <img src="assets/img/g-laugh.jpg" alt="Ника смеётся, Артём смотрит на неё" width="1200" height="1600" loading="lazy">
+    <img src="assets/img/g-pier.jpg" alt="Артём и Ника сидят на краю деревянного пирса вечером" width="1600" height="1200" loading="lazy">
+  </div>
+  <div class="gallery__col">
+    <img src="assets/img/g-hands.jpg" alt="Рука Ники на рукаве Артёма" width="1600" height="1200" loading="lazy">
+    <img src="assets/img/g-portrait.jpg" alt="Портрет Артёма и Ники, оба смотрят в камеру" width="1200" height="1600" loading="lazy">
+  </div>
+</section>
+
+<!-- 9. Анкета и RSVP -->
+<section class="rsvp reveal" id="rsvp">
+  <h2 class="h2">Вы с нами?</h2>
+  <p class="rsvp__intro">Ответьте, пожалуйста, до 1 мая. Нам нужно знать, сколько стульев ставить и на кого готовить.</p>
+
+  <form class="form" id="rsvpForm" novalidate>
+    <div class="field">
+      <label for="name">Ваше имя и фамилия</label>
+      <input id="name" name="name" type="text" autocomplete="name" required>
+      <p class="field__error" id="name-error" hidden>Напишите, как вас зовут, иначе мы не поймём, чей это ответ.</p>
+    </div>
+
+    <fieldset class="field">
+      <legend>Придёте?</legend>
+      <div class="choices">
+        <label class="choice"><input type="radio" name="attend" value="yes" required><span>Буду, конечно</span></label>
+        <label class="choice"><input type="radio" name="attend" value="no"><span>Не смогу, простите</span></label>
+      </div>
+      <p class="field__error" id="attend-error" hidden>Выберите один из вариантов.</p>
+    </fieldset>
+
+    <div class="field">
+      <label class="choice choice--check"><input type="checkbox" name="plusone" id="plusone"><span>Со мной будет ещё один человек</span></label>
+      <div class="field field--nested" id="plusoneWrap" hidden>
+        <label for="plusoneName">Как зовут вашего спутника</label>
+        <input id="plusoneName" name="plusoneName" type="text">
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="food">Аллергии или ограничения в еде</label>
+      <input id="food" name="food" type="text" placeholder="Например: без орехов, вегетарианское">
+    </div>
+
+    <fieldset class="field">
+      <legend>Как добираетесь</legend>
+      <div class="choices">
+        <label class="choice"><input type="radio" name="transfer" value="bus"><span>На автобусе от центра, 14:15</span></label>
+        <label class="choice"><input type="radio" name="transfer" value="car"><span>Своей машиной</span></label>
+      </div>
+    </fieldset>
+
+    <div class="field">
+      <label for="song">Песня, под которую вы точно пойдёте танцевать</label>
+      <input id="song" name="song" type="text">
+    </div>
+
+    <button class="btn btn--dark btn--submit" type="submit">Отправить ответ</button>
+  </form>
+
+  <div class="form__done" id="rsvpDone" hidden aria-live="polite">
+    <p class="form__done-title">Спасибо!</p>
+    <p>Это демонстрационный сайт, поэтому ответ никуда не ушёл. В настоящем приглашении он попал бы к паре, а вы получили бы подтверждение.</p>
+  </div>
+</section>
+
+<!-- 10. Подвал -->
+<footer class="footer">
+  <p>Вопросы по вечеру: Марина, организатор, <a href="tel:+79120000000">+7 912 000-00-00</a></p>
+  <p class="footer__note">Демонстрационный сайт-приглашение. Пара вымышленная, фотографии сгенерированы, номер телефона ненастоящий.</p>
+</footer>
+
+<!-- Фоновая музыка. Включает гость: браузеры не дают запустить звук сами -->
+<audio id="musicAudio" src="assets/audio/music.mp3" loop preload="none"></audio>
+<button class="music" id="musicBtn" type="button" aria-pressed="false" aria-label="Включить музыку">
+  <span class="music__bars" aria-hidden="true"><i></i><i></i><i></i></span>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
