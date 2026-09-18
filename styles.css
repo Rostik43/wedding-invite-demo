@@ -215,8 +215,15 @@ section { padding: clamp(64px, 12vw, 128px) var(--pad); }
   aspect-ratio: 4 / 5;
   border-radius: var(--radius);
   cursor: grab;
-  /* вертикальную прокрутку отдаём браузеру, стираем движением вбок */
-  touch-action: pan-y;
+  /* Жест, начатый на плашке, целиком наш.
+     С pan-y браузер принимал диагональное стирание за прокрутку,
+     обрывал события указателя и дёргал страницу. */
+  touch-action: none;
+  -webkit-touch-callout: none;
+  /* без этого протаскивание мышью начинает выделять текст,
+     а браузер при выделении сам подкручивает страницу */
+  user-select: none;
+  -webkit-user-select: none;
   transition: opacity 0.6s var(--ease);
 }
 .date__foil:active { cursor: grabbing; }
